@@ -1,6 +1,6 @@
 import random
-from character import Character, clone_character
-from habilidad import Ability
+from tarea1_infografia.character import Character, clone_character
+from tarea1_infografia.habilidad import Ability
 
 rogue = Character(15, 10, 0.2, 0.2)
 rogue.set_name("rogue")
@@ -90,7 +90,7 @@ while sum(1 for j in jugadores if j.hp > 0) > 1:
 
         for objetivo in vivos:
             if objetivo.hp <= 0:
-                print(f"💀 {objetivo.name} ha sido derrotado!")
+                print(f" {objetivo.name} ha sido derrotado!")
 
 ganador = [j for j in jugadores if j.hp > 0][0]
-print(f"\n🏆 El ganador es {ganador.name} con {ganador.hp} HP restantes!")
+print(f"\n El ganador es {ganador.name} con {ganador.hp} HP restantes!")
